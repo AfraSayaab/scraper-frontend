@@ -49,7 +49,7 @@ const FileUploader = () => {
     if (data && typeof refetchFileDetails === "function") {
       refetchFileDetails();
     }
-  }, [pagination.current, pagination.pageSize, runningFile]);
+  }, [pagination.current, pagination.pageSize, runningFile,data]);
 
 
   useEffect(() => {
@@ -72,7 +72,7 @@ const FileUploader = () => {
         clearInterval(pollingInterval);
       }
     };
-  }, [runningFiles]);
+  }, [runningFiles,pollingInterval]);
 
 
 
