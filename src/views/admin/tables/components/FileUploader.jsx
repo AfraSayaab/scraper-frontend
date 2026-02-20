@@ -174,6 +174,7 @@ const FileUploader = () => {
   
     try {
       const response = await startScraping({ fileName: file.fileName }).unwrap();
+      console.log(response);
       message.success(`Scraping started successfully for ${file.fileName}`);
       refetchFileDetails(); // Refetch to ensure data is correct
     } catch (error) {
