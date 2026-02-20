@@ -4,7 +4,7 @@ const API_BASE_URL = process.env.REACT_APP_API_URL;
 
 export const scraperApi = createApi({
     reducerPath: 'scraperApi',
-    baseQuery: fetchBaseQuery({ baseUrl: `${API_BASE_URL}/api/scraper` }),
+    baseQuery: fetchBaseQuery({ baseUrl: `${API_BASE_URL}/safer` }),
     endpoints: (builder) => ({
         fetchFileDetails: builder.query({
             query: () => '/list-files',
