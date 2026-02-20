@@ -234,6 +234,7 @@ const FileUploader = () => {
       ...prevRunningFiles,
       ...filesToStart.map((file) => file.fileName),
     ]);
+    console.log(isScrapingAll)
     setIsScrapingAll(true);
   
     try {
@@ -241,6 +242,7 @@ const FileUploader = () => {
         fileNames: filesToStart.map((file) => file.fileName),
       };
       const response = await startScrapingAll(payload).unwrap();
+      console.log(response);
       message.success("Scraping started for selected files successfully.");
       refetchFileDetails();
     } catch (error) {
